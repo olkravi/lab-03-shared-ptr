@@ -21,19 +21,19 @@ char *test_ptr2 = new char;
 SharedPtr<char> pointer3(test_ptr1);
 EXPECT_EQ(*pointer3, *test_ptr2);
 
-pointer3 = pointer3;
+pointer2 = pointer3;
 EXPECT_EQ(pointer2.get(), pointer3.get());
 
-pointer1.Swap(pointer2);
+pointer1.Swap(pointer3);
 EXPECT_EQ(pointer1.get(), pointer3.get());
-EXPECT_EQ(pointer2.get(), test_ptr1);
+EXPECT_EQ(pointer3.get(), test_ptr1);
 
 pointer3.reset();
 EXPECT_EQ(pointer3.use_count(), 0);
 EXPECT_EQ(pointer3.get(), nullptr);
 
 pointer2.reset(test_ptr1);
-EXPECT_EQ(pointer1.get(), test_ptr1);
+EXPECT_EQ(pointer2.get(), test_ptr1);
 }
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
