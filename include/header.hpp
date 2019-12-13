@@ -47,7 +47,7 @@ public:
         }
         _ptr = nullptr;
     }
-    auto opeartor= (const SharedPtr& r) -> SharedPtr& {
+    auto opeartor =(const SharedPtr& r) -> SharedPtr& {
         if (&r == this)
             return *this;
         this->~SharedPtr();
