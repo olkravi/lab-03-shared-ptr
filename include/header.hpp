@@ -99,8 +99,10 @@ public:
         _ptr = nullptr;
         if (ptr == nullptr)
             return;
-        _prt = ptr;
-        (*SharedPtr::data_base[_ptr])++;
+        _ptr = ptr;
+        if ((*SharedPtr::data_base[_ptr]))
+            (*SharedPtr::data_base[_ptr])++;
+        SharedPtr::data_base[_ptr] = new atomic_uint(1);
     }
     void Swap(SharedPtr& r)
     {
