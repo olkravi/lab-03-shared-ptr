@@ -37,11 +37,8 @@ pointer4.reset();
 EXPECT_EQ(pointer4.use_count(), 0);
 EXPECT_EQ(pointer4.get(), nullptr);
 
-pointer3.reset(test_ptr1);
-EXPEXT_EQ(pointer1.get(), nullptr);
-EXPEXT_EQ(pointer3.get(), nullptr);
-EXPEXT_EQ(pointer1.use_count(), 0);
-EXPEXT_EQ(pointer3.use_count(), 0);
+pointer2.reset(test_ptr1);
+EXPEXT_EQ(pointer2.get(), test_ptr1);
 }
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
