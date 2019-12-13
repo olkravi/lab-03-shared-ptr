@@ -4,7 +4,7 @@
 #include "header.hpp"
 
 TEST(Example, EmptyTest) {
-SharedPtr pointer1();
+SharedPtr<char> pointer1();
 EXPEXT_EQ(pointer1.get(), nullptr);
 
 char *test_ptr1 = new char;
