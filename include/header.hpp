@@ -47,7 +47,7 @@ public:
         }
         _ptr = nullptr;
     }
-    auto opeartor =(const SharedPtr& r) -> SharedPtr& {
+    auto operator=(const SharedPtr& r) -> SharedPtr& {
         if (&r == this)
             return *this;
         this->~SharedPtr();
@@ -56,7 +56,7 @@ public:
             (*SharedPtr::data_base[_ptr])++;
         return *this;
     }
-    auto opeartor =(SharedPtr&& r) -> SharedPtr& {
+    auto operator=(SharedPtr&& r) -> SharedPtr& {
         if (&r == this)
             return *this;
         this->~SharedPtr();
