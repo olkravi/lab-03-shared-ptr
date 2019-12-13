@@ -47,7 +47,7 @@ public:
         }
         _ptr = nullptr;
     }
-    auto opeartor=(const SharedPtr& r) -> SharedPtr& {
+    auto opeartor= (const SharedPtr& r) -> SharedPtr& {
         if (&r == this)
             return *this;
         this->~SharedPtr();
@@ -56,13 +56,14 @@ public:
             (*SharedPtr::data_base[_ptr])++;
         return *this;
     }
-    auto opeartor=(SharedPtr&& r) -> SharedPtr& {
+    auto opeartor =(SharedPtr&& r) -> SharedPtr& {
         if (&r == this)
             return *this;
         this->~SharedPtr();
 
         _ptr = r._ptr;
         r._ptr = nullptr;
+        return *this;
     }
 
     // checks if the pointer points to an object
