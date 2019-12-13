@@ -4,7 +4,6 @@
 #include "header.hpp"
 
 TEST(Example, EmptyTest) {
-
 char *test_ptr1 = new char;
 *test_ptr1 = 'a';
 
