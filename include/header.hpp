@@ -47,21 +47,21 @@ public:
         }
         _ptr = nullptr;
     }
-    auto opeartor=(const SharedPtr& r) -> SharedPtr&
+    auto opeartor =(const SharedPtr& r) -> SharedPtr&
     {
         if (&r == this)
-			return *this;
+            return *this;
         this->~SharedPtr();
         _ptr = r._ptr;
         if (_ptr != nullptr)
             (*data_base[_ptr])++;
         return *this;
     }
-    auto opeartor=(SharedPtr&& r) -> SharedPtr&
+    auto opeartor =(SharedPtr&& r) -> SharedPtr&
     {
         if (&r == this)
-			return *this;
-		this->~SharedPtr();
+            return *this;
+        this->~SharedPtr();
 
         _ptr = r._ptr;
         r._ptr = nullptr;
@@ -119,6 +119,7 @@ public:
         return number;
     }
     static std::map <T*, std::atomic_uint*> data_base;
+
 private:
     T* _ptr;
 };

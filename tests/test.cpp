@@ -42,7 +42,6 @@ EXPEXT_EQ(pointer1.get(), nullptr);
 EXPEXT_EQ(pointer3.get(), nullptr);
 EXPEXT_EQ(pointer1.use_count(), 0);
 EXPEXT_EQ(pointer3.use_count(), 0);
-
 }
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
