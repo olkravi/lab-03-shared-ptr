@@ -36,7 +36,7 @@ pointer2.reset(test_ptr1);
 EXPECT_EQ(pointer2.get(), test_ptr1);
 
 pointer1.reset();
-pointer2.reset();
+//pointer2.reset();
 }
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
