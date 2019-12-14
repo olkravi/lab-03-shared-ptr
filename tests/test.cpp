@@ -25,7 +25,7 @@ pointer2 = pointer3;
 EXPECT_EQ(pointer2.get(), pointer3.get());
 
 pointer1.Swap(pointer3);
-EXPECT_EQ(pointer1.get(), pointer3.get());
+EXPECT_EQ(pointer1.get(), test_ptr2);
 EXPECT_EQ(pointer3.get(), test_ptr1);
 
 pointer3.reset();
