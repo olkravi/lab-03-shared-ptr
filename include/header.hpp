@@ -127,4 +127,7 @@ private:
     T* _ptr;
 };
 
+template <typename T>
+std::map<T*, std::atomic_uint*> SharedPtr<T>::data_base{};
+
 #endif // INCLUDE_HEADER_HPP_
