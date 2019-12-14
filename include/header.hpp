@@ -38,6 +38,8 @@ public:
     {
         if (_ptr == nullptr)
             return;
+        if (SharedPtr::data_base[_ptr] == nullptr)
+            _ptr = nullptr;
         (*SharedPtr::data_base[_ptr])--;
         if ((*SharedPtr::data_base[_ptr]) == 0)
         {
