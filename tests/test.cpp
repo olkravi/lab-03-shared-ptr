@@ -18,7 +18,7 @@ EXPECT_EQ(pointer2.use_count(), 2);
 
 char *test_ptr2 = new char;
 *test_ptr2 = 'b';
-SharedPtr<char> pointer3(test_ptr1);
+SharedPtr<char> pointer3(test_ptr2);
 EXPECT_EQ(*pointer3, *test_ptr2);
 
 pointer2 = pointer3;
