@@ -88,10 +88,6 @@ public:
     }
     void reset()
     {
-        //if (_ptr != nullptr)
-         //   if ((*SharedPtr::data_base[_ptr]) != 0)
-         //       (*SharedPtr::data_base[_ptr])--;
-       // _ptr = nullptr;
          this->~SharedPtr();
     }
     void reset(T* ptr)
