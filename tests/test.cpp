@@ -1,4 +1,4 @@
-// Copyright 2019 Kirill <your_email>
+// Copyright 2019 olkravi <your_email>
 
 #include <gtest/gtest.h>
 #include "header.hpp"
