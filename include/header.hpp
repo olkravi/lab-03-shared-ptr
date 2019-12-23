@@ -111,8 +111,6 @@ public:
         r._ptr = temp;
         temp = nullptr;
     }
-    // returns the number of SharedPtr objects
-    // that reference the same managed object
     auto use_count() const -> size_t
     {
         if (_ptr == nullptr)
